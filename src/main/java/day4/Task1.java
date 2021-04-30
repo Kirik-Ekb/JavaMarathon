@@ -21,9 +21,9 @@ public class Task1 {
             }
             if (tbl[i] % 2 != 0) {
                 nCh++;
-                if (tbl[i] == 1) {
-                    n1++;
-                }
+            }
+            if (tbl[i] == 1) {
+                n1++;
             }
             sum = sum + tbl[i];
         }
