@@ -5,13 +5,7 @@ public class Motorbike {
     private String col;
     private String mod;
 
-    public Motorbike() {
-        year = 0;
-        col = "не покрашен";
-        mod = "ручная сборка";
-    }
-
-    public Motorbike(int year, String col, String mod) {
+    public Motorbike(String mod, String col, int year) {
         this.year = year;
         this.col = col;
         this.mod = mod;
@@ -20,20 +14,20 @@ public class Motorbike {
     public int getYear() {
         return year;
     }
+
     public String getCol() {
         return col;
     }
+
     public String getMod() {
         return mod;
     }
 
-    void info() {System.out.println("Это мотоцикл");}
-    int yearDifference(int inputYear) {
-        int y = inputYear - year;
-        if (y < 0) {
-            System.out.println("Введен некорректный год");
-            return 0;
-        }
-        return y;
+    public void info() {
+        System.out.println("Это мотоцикл");
+    }
+
+    public int yearDifference(int inputYear) {
+        return Math.abs(inputYear - year);
     }
 }

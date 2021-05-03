@@ -8,7 +8,7 @@ public class Task1 {
         myAuto.setCol("blue");
         myAuto.setMod("porshe");
 
-        Motorbike myMoto = new Motorbike(2020,"black","honda");
+        Motorbike myMoto = new Motorbike("honda","black",2000);
 
         myAuto.info();
         myMoto.info();

@@ -8,9 +8,11 @@ public class Car {
     public void setYear(int yaer) {
         this.year = yaer;
     }
+
     public void setCol(String col) {
         this.col = col;
     }
+
     public void setMod(String mod) {
         this.mod = mod;
     }
@@ -18,16 +20,21 @@ public class Car {
     public int getYear() {
         return year;
     }
+
     public String getCol() {
         return col;
     }
+
     public String getMod() {
         return mod;
     }
 
-    void info() {System.out.println("Это автомобиль");}
-    int yearDifference(int inputYear) {
-        return inputYear - year;
+    public void info() {
+        System.out.println("Это автомобиль");
+    }
+
+    public int yearDifference(int inputYear) {
+        return Math.abs(inputYear - year);
     }
 }
 

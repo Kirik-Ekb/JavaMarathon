@@ -21,15 +21,17 @@ public class Player {
         return countPlayers;
     }
 
-    void run() {
-        if (this.stamina > MIN_STAMINA) {
-            this.stamina--;
-        } else {
+    public void run() {
+        if (stamina == 0) {
+            return;
+        }
+        stamina--;
+        if (stamina == 0) {
             countPlayers--;
         }
     }
 
-    static void info() {
+    public static void info() {
         if (countPlayers < 5) {
             System.out.println("Команды не полные. На поле ещё есть " + (6 - countPlayers) + " свободных места");
         } else if (countPlayers == 6) {

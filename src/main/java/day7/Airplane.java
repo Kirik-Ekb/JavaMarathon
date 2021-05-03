@@ -38,19 +38,21 @@ public class Airplane {
         return fuel;
     }
 
-    void info() {
+    public void info() {
         System.out.println("Изготовитель: " + producer + ", год выпуска: " + year + ", длина: " + length + ", вес: " + weight + ", количество топлива в баке: " + fuel);
     }
 
-    void fillUp(int n) {
+    public void fillUp(int n) {
         fuel = fuel + n;
     }
 
-    static void compareAirplanes(Airplane air1, Airplane air2) {
+    public static void compareAirplanes(Airplane air1, Airplane air2) {
         if (air1.length < air2.length) {
-            System.out.println("Самолет " + air2.producer + " длинее " + air1.producer);
+            System.out.println("Второй самолет длиннее");
+        } else if (air1.length > air2.length) {
+            System.out.println("Первый самолет длиннее");
         } else {
-            System.out.println("Самолет " + air1.producer + " длинее " + air2.producer);
+            System.out.println("Длины самолетов равны");
         }
     }
 }
